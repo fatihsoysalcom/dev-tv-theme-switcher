@@ -1,0 +1,105 @@
+<html>
+<head>
+<title>DEV·TV Themes</title>
+<style>
+  /* Base styles */
+  body {
+    font-family: sans-serif;
+    margin: 20px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  /* Theme: Graphite */
+  .theme-graphite {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+  }
+  .theme-graphite .container {
+    background-color: #2c2c2c;
+    box-shadow: 0 2px 5px rgba(255,255,255,0.1);
+  }
+
+  /* Theme: Walnut */
+  .theme-walnut {
+    background-color: #8B4513;
+    color: #f5deb3;
+  }
+  .theme-walnut .container {
+    background-color: #A0522D;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+
+  /* Theme: Cream */
+  .theme-cream {
+    background-color: #FFFDD0;
+    color: #333;
+  }
+  .theme-cream .container {
+    background-color: #FAFAD2;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  .theme-selector {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .theme-selector button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .theme-selector button:hover {
+    opacity: 0.9;
+  }
+</style>
+</head>
+<body>
+
+<div class="theme-selector">
+  <button onclick="applyTheme('graphite')">Graphite</button>
+  <button onclick="applyTheme('walnut')">Walnut</button>
+  <button onclick="applyTheme('cream')">Cream</button>
+</div>
+
+<div id="content" class="container">
+  <h1>DEV·TV'nin Yeni Yüzü</h1>
+  <p>Bu örnek, DEV·TV'nin sunduğu Graphite, Walnut ve Cream temalarının kullanıcı deneyimi üzerindeki etkisini göstermektedir. Farklı temalar, uygulamanın genel görünümünü ve hissini değiştirerek kullanıcıların tercihlerine göre kişiselleştirme imkanı sunar.</p>
+  <h2>Kullanıcı Deneyimi ve Arayüz Tasarımının Önemi</h2>
+  <p>Dijital dünyada var olmak, artık sadece işlevsel olmakla sınırlı değil; aynı zamanda kullanıcılarınızı etkilemek, onlara keyifli bir deneyim sunmak anlamına geliyor. Kullanıcı deneyimi (UX - User Experience), bir kullanıcının bir ürün, sistem veya hizmetle olan etkileşiminin tamamını kapsayan bir kavramdır.</p>
+</div>
+
+<script>
+  function applyTheme(themeName) {
+    // Remove existing theme classes
+    document.body.classList.remove('theme-graphite', 'theme-walnut', 'theme-cream');
+
+    // Add the selected theme class
+    if (themeName) {
+      document.body.classList.add('theme-' + themeName);
+    }
+  }
+
+  // Apply a default theme on load (optional)
+  applyTheme('cream'); // Default to Cream
+</script>
+
+</body>
+</html>
